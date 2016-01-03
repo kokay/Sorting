@@ -20,12 +20,13 @@ void Marge(int low, int mid, int high, vector<int>* sequence) {
       second.pop_front();
     }
   }
-  for (int i = 0;i < first.size();++i) {
+  
+  for (int i = 0;i < first.size();++i) 
     sequence->at(idx++) = first.at(i);
-  }
-  for (int i = 0;i < second.size();++i) {
+  
+  for (int i = 0;i < second.size();++i) 
     sequence->at(idx++) = second.at(i);
-  }
+  
 }
 
 void Mergesort(int low, int high, vector<int>* sequence) {
