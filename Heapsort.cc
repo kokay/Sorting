@@ -44,18 +44,18 @@ void DownHeap(const int firstSortedIdx, vector<int>* sequence) {
 }
 
 void Heapsort(vector<int>* sequence) {
-  sequence->insert(sequence->begin(), 0); // n
+  sequence->insert(sequence->begin(), 0); 
 
-  for (int i = 1;i < sequence->size();++i) { // n log n
-    HeapsortHeapify(i, sequence); //log n
+  for (int i = 1;i < sequence->size();++i) { 
+    HeapsortHeapify(i, sequence); 
   }
 
-  for (int i = sequence->size() - 1;i >= 1;--i) { // n log n
-    swap(sequence->at(1), sequence->at(i)); // 1
-    DownHeap(i, sequence); // log n
+  for (int i = sequence->size() - 1;i >= 1;--i) { 
+    swap(sequence->at(1), sequence->at(i));
+    DownHeap(i, sequence); 
   }
 
-  sequence->erase(sequence->begin()); // n
+  sequence->erase(sequence->begin()); 
 }
 
 int main() {
